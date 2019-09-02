@@ -11,20 +11,20 @@ body, html {
 }
 
 /* Header Styles */
-header{
+header {
   background-color: rgb(87, 87, 87);
   height: 11vh;
   /* padding: 5px; */
 }
 
-.navbar{
+.navbar {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#navbar-logo{
+#navbar-logo {
   float: left;
   margin-left: 5vw;
   width: 50%;
@@ -32,27 +32,28 @@ header{
   background-image: url('../images/pepega-logo.png');
   background-repeat: no-repeat;
   background-size: contain;
+}
 
-  /* TEMP
-  background-color: gold; 
-  font-size: 24px; 
-  /* text-align: center;  */
-  /* padding: 0 10px 0 10px; */
+.navbar-options {
+  width: 100%;
+  height: 100%;
 }
 
 .hamburger {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  float: right;
   height: 40%;
-  width: 40px;
+  width: 20%;
   padding: 5px;
-  margin-right: 10px;
+  margin: 18px 15px 0 0;
   background-color: transparent;
   cursor: pointer;
 }
 
 .hamburger .line1, .line2, .line3 {
+  width: 100%;
   height: 5px;
   background-color: white;
   border-radius: 3px;
@@ -61,15 +62,15 @@ header{
 
 /* Navbar Toggle Animation - .change */
 .change .line1 {
-  transform: rotate(-315deg) translate(0.5rem, 0.5rem);
-  -webkit-transform: rotate(-315deg) translate(0.5rem, 0.5rem);
+  transform: rotate(-315deg) translate(5px, 5px);
+  -webkit-transform: rotate(-315deg) translate(5px, 5px);
 }
 .change .line2 {
   opacity: 0;
 }
 .change .line3 {
-  transform: rotate(135deg) translate(-0.5rem, 0.5rem);
-  -webkit-transform: rotate(135deg) translate(-0.5rem, 0.5rem);
+  transform: rotate(135deg) translate(-12px, 11px);
+  -webkit-transform: rotate(135deg) translate(-12px, 11px);
 }
 
 .navbar-ul-options {
@@ -141,14 +142,17 @@ footer p {
 }
 
 
-/* Media - Tablet */
-@media only screen and (min-width: 768px){
+/* Media - Tablets, iPads (portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
   header {
     height: 7vh;
   }
-
   .container {
     /* min-height: calc(100vh - (7vh - 40px));  */
+  }
+  
+  .hamburger {
+    width: 10%;
   }
 
   section {
@@ -156,8 +160,13 @@ footer p {
   }
 }
 
-/* Media - Desktop */
-@media only screen and (min-width: 1000px){
+/* Media - Tablets, iPads (landscape) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+}
+
+/* Media - Laptop, Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
   header {
     height: 6vh;
   }
