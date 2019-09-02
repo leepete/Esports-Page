@@ -25,13 +25,17 @@ header{
 
 #navbar-logo{
   float: left;
-  margin-left: 20px;
+  margin-left: 5vw;
+  width: 15%;
+  height: 80%;
+  background-image: url('../images/pepega-logo.png');
+  background-size: cover;
 
-  /* TEMP */
+  /* TEMP
   background-color: gold; 
   font-size: 24px; 
   text-align: center; 
-  padding: 0 10px 0 10px;
+  padding: 0 10px 0 10px; */
 }
 
 .hamburger {
@@ -55,15 +59,15 @@ header{
 
 /* Navbar Toggle Animation - .change */
 .change .line1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-315deg) translate(0.5rem, 0.5rem);
+  -webkit-transform: rotate(-315deg) translate(0.5rem, 0.5rem);
 }
 .change .line2 {
   opacity: 0;
 }
 .change .line3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(135deg) translate(-0.5rem, 0.5rem);
+  -webkit-transform: rotate(135deg) translate(-0.5rem, 0.5rem);
 }
 
 .navbar-ul-options {
