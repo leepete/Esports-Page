@@ -1,0 +1,134 @@
+/* Base CSS Elements */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+/* Header Styles */
+header{
+  background-color: rgb(87, 87, 87);
+  height: 10vh;
+}
+
+.navbar{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar-logo{
+  float: left;
+  margin-left: 20px;
+
+  /* TEMP */
+  background-color: gold; 
+  font-size: 24px; 
+  text-align: center; 
+  padding: 0 10px 0 10px;
+}
+
+.hamburger {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 40%;
+  width: 40px;
+  padding: 5px;
+  margin-right: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger .line1, .line2, .line3 {
+  height: 5px;
+  background-color: white;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+/* Navbar Toggle Animation - .change */
+.change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+  transform: rotate(-45deg) translate(-8px, 7px);
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navbar-ul-options {
+  list-style: none;
+  position: absolute;
+  text-align: center;
+  display: none;
+  width: 100%;
+  margin-top: 225px;
+  transition: 2s;
+  font-size: 0;
+  background-color: darkgrey;
+}
+
+.navbar-ul-options li {
+  padding: 15px 10px 15px 10px;
+  background-color: darkgrey;
+  color: gold;
+  font-size: 16px;
+}
+
+
+.nav-bar-toggle {
+  display: unset;
+}
+
+/* Main Container */
+.container {
+  background-color: aliceblue;
+}
+
+.banner {
+  background-image: url("../images/banner-img.jpg");
+  background-size: cover;
+  height: 250px; 
+  opacity: 0.9;
+}
+
+.banner-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.banner-title h1 {
+  margin-bottom: 10px;
+}
+
+section {
+  padding: 15px 10px 15px 10px;
+  text-align: center;
+  /* background-color:  */
+}
+
+
+/* Footer */
+footer {
+  background-color: darkgrey; 
+  height: 40px;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 10px; /* Temp */
+}
