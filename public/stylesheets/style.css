@@ -55,8 +55,8 @@ header{
 
 /* Navbar Toggle Animation - .change */
 .change .line1 {
-  -webkit-transform: rotate(-45deg) translate(-8px, 7px);
-  transform: rotate(-45deg) translate(-8px, 7px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 .change .line2 {
   opacity: 0;
@@ -93,6 +93,7 @@ header{
 /* Main Container */
 .container {
   background-color: aliceblue;
+  min-height: calc(100vh - (10vh - 40px)); /* Footer fix? browser window height - height of header & footer */
 }
 
 .banner {
@@ -131,4 +132,31 @@ footer {
 footer p {
   text-align: center;
   padding-top: 10px; /* Temp */
+}
+
+
+/* Media - Tablet */
+@media only screen and (min-width: 768px){
+  header {
+    height: 7vh;
+  }
+
+  .container {
+    /* min-height: calc(100vh - (7vh - 40px));  */
+  }
+
+  section {
+    padding: 20px 70px 40px 70px; 
+  }
+}
+
+/* Media - Desktop */
+@media only screen and (min-width: 1000px){
+  header {
+    height: 6vh;
+  }
+
+  section {
+    padding: 40px 150px 40px 150px; 
+  }
 }
