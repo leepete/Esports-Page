@@ -13,7 +13,7 @@ body, html {
 /* Header Styles */
 header{
   background-color: rgb(87, 87, 87);
-  height: 10vh;
+  height: 11vh;
 }
 
 .navbar{
@@ -27,7 +27,7 @@ header{
   float: left;
   margin-left: 5vw;
   width: 15%;
-  height: 80%;
+  height: 75%;
   background-image: url('../images/pepega-logo.png');
   background-size: cover;
 
