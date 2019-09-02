@@ -14,6 +14,7 @@ body, html {
 header{
   background-color: rgb(87, 87, 87);
   height: 11vh;
+  /* padding: 5px; */
 }
 
 .navbar{
@@ -26,16 +27,17 @@ header{
 #navbar-logo{
   float: left;
   margin-left: 5vw;
-  width: 15%;
+  width: 50%;
   height: 75%;
   background-image: url('../images/pepega-logo.png');
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   /* TEMP
   background-color: gold; 
   font-size: 24px; 
-  text-align: center; 
-  padding: 0 10px 0 10px; */
+  /* text-align: center;  */
+  /* padding: 0 10px 0 10px; */
 }
 
 .hamburger {
@@ -76,7 +78,7 @@ header{
   text-align: center;
   display: none;
   width: 100%;
-  margin-top: 225px;
+  margin-top: 33vh;
   transition: 2s;
   font-size: 0;
   background-color: darkgrey;
