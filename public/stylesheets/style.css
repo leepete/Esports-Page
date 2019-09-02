@@ -85,9 +85,9 @@ header{
   font-size: 16px;
 }
 
-
 .nav-bar-toggle {
   display: unset;
+  z-index: 1;
 }
 
 /* Main Container */
