@@ -115,19 +115,11 @@ header {
 
 .slider ul li:active {
   background-color: rgb(70, 70, 70);
-    transition: visibility 0s .2s;
-    transition-property: visibility;
-    transition-duration: 0s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 .slider ul li a:active {
-  transition: visibility 0s .2s;
-    transition-property: visibility;
-    transition-duration: 0s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
   color: goldenrod;
 }
 
