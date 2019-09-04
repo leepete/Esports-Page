@@ -13,8 +13,10 @@ body, html {
 /* Header Styles */
 header {
   background-color: rgb(87, 87, 87);
+  width: 100%;
   height: 11vh;
-  /* padding: 5px; */
+  z-index: 10000;
+  position: relative;
 }
 
 .navbar {
@@ -32,6 +34,7 @@ header {
   background-image: url('../images/pepega-logo.png');
   background-repeat: no-repeat;
   background-size: contain;
+
 }
 
 .navbar-options {
@@ -61,40 +64,62 @@ header {
 }
 
 /* Navbar Toggle Animation - .change */
-.change .line1 {
+.animate .line1 {
   transform: rotate(-315deg) translate(5px, 5px);
   -webkit-transform: rotate(-315deg) translate(5px, 5px);
 }
-.change .line2 {
+.animate .line2 {
   opacity: 0;
 }
-.change .line3 {
+.animate .line3 {
   transform: rotate(135deg) translate(-12px, 11px);
   -webkit-transform: rotate(135deg) translate(-12px, 11px);
 }
 
-.navbar-ul-options {
+.slider{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 11vh;
+  overflow-y: hidden;
+  transform: translate(0, -100%);
+  -webkit-transition:-webkit-transform .6s ease;
+     -moz-transition:   -moz-transform .6s ease;
+      -ms-transition:    -ms-transform .6s ease;
+          transition:        transform .6s ease;
+  z-index: 1;
+}
+
+.slider ul {
   list-style: none;
   position: absolute;
   text-align: center;
-  display: none;
   width: 100%;
-  margin-top: 33vh;
-  transition: 2s;
-  font-size: 0;
-  background-color: darkgrey;
 }
 
-.navbar-ul-options li {
-  padding: 15px 10px 15px 10px;
+.slider ul li {
+  padding: 20px 10px 20px 10px;
+  border-color: black;
+  border-width: 1px;
   background-color: darkgrey;
   color: gold;
   font-size: 16px;
 }
 
-.nav-bar-toggle {
-  display: unset;
-  z-index: 1;
+.slider.open {
+  /* visible */
+  -webkit-transform: translate(0, 0%);
+     -moz-transform: translate(0, 0%);
+      -ms-transform: translate(0, 0%);
+          transform: translate(0, 0%);
+}
+
+.slider.close {
+   /* completely offscreen */
+   -webkit-transform: translate(0, -100%);
+      -moz-transform: translate(0, -100%);
+       -ms-transform: translate(0, -100%);
+           transform: translate(0, -100%);
 }
 
 /* Main Container */
