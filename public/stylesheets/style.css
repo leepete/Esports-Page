@@ -10,7 +10,7 @@ body, html {
   height: 100%;
 }
 
-/* When something is tapped anywhere, it will highlight! */
+/* When something is tapped anywhere, it will highlight when active! */
 html {
   -webkit-tap-highlight-color: rgba(72, 72, 72, 0);
 }
@@ -164,7 +164,7 @@ header {
   flex-direction: column;
   justify-content: center; 
   text-align: center;
-  color: rgb(220, 230, 21);
+  color: rgb(242, 249, 107);
   margin-top: -29vh;
   position: absolute;
   width: 100%;
@@ -175,7 +175,7 @@ header {
 }
 
 section {
-  padding: 15px 10px 15px 10px;
+  padding: 25px 35px 25px 35px;
   text-align: center;
   background-color: aliceblue;
 }
