@@ -10,11 +10,15 @@ body, html {
   height: 100%;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Header Styles */
 header {
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(50, 50, 50);
   width: 100%;
-  height: 11vh;
+  height: 10vh;
   z-index: 10000;
   position: relative;
 }
@@ -46,12 +50,11 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
   float: right;
-  height: 40%;
+  height: 50%;
   width: 20%;
-  padding: 5px;
-  margin: 18px 15px 0 0;
-  background-color: transparent;
+  margin: 2.5vh 5vw;
   cursor: pointer;
 }
 
@@ -63,25 +66,25 @@ header {
   transition: 0.4s;
 }
 
-/* Navbar Toggle Animation - .change */
+/* Navbar Toggle Animation */
 .animate .line1 {
-  transform: rotate(-315deg) translate(5px, 5px);
-  -webkit-transform: rotate(-315deg) translate(5px, 5px);
+  transform: rotate(-315deg) translate(4vw, 1vh);
+  -webkit-transform: rotate(-315deg) translate(4vw, 1vh);
 }
 .animate .line2 {
   opacity: 0;
 }
 .animate .line3 {
-  transform: rotate(135deg) translate(-12px, 11px);
-  -webkit-transform: rotate(135deg) translate(-12px, 11px);
+  transform: rotate(135deg) translate(-3.4vw, 0.8vh);
+  -webkit-transform: rotate(135deg) translate(-3.4vw, 0.8vh);
 }
 
 .slider{
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 11vh;
-  overflow-y: hidden;
+  top: 10vh;
+  /* overflow-y: hidden; */
   transform: translate(0, -100%);
   -webkit-transition:-webkit-transform .6s ease;
      -moz-transition:   -moz-transform .6s ease;
@@ -99,11 +102,23 @@ header {
 
 .slider ul li {
   padding: 20px 10px 20px 10px;
-  border-color: black;
-  border-width: 1px;
-  background-color: darkgrey;
-  color: gold;
-  font-size: 16px;
+  border-bottom: 1px solid;
+  color: rgb(165, 165, 165);
+  background-color: #dad8d8;
+}
+
+.slider ul li a, .slider ul li a:link, .slider ul li a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(57, 53, 33)
+}
+
+.slider ul li:active {
+  background-color: rgb(70, 70, 70)
+}
+
+.slider ul li a:active {
+  color: goldenrod;
 }
 
 .slider.open {
@@ -125,35 +140,37 @@ header {
 /* Main Container */
 .container {
   background-color: aliceblue;
-  min-height: calc(100vh - (10vh - 40px)); /* Footer fix? browser window height - height of header & footer */
+  /* overflow: hidden; */
+  /* min-height: calc(100vh - (10vh - 40px)); */
+   /* Footer fix? browser window height - height of header & footer */
 }
 
 .banner {
   background-image: url("../images/banner-img.jpg");
   background-size: cover;
-  height: 250px; 
-  opacity: 0.9;
+  height: 40vh; 
 }
 
 .banner-title{
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  height: 100%;
   text-align: center;
-  color: white;
+  color: rgb(220, 230, 21);
+  margin-top: -29vh;
+  position: absolute;
+  width: 100%;
 }
 
 .banner-title h1 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 section {
   padding: 15px 10px 15px 10px;
   text-align: center;
-  /* background-color:  */
+  background-color: aliceblue;
 }
-
 
 /* Footer */
 footer {
@@ -178,6 +195,10 @@ footer p {
   
   .hamburger {
     width: 10%;
+  }
+
+  .slider {
+    top: 7vh;
   }
 
   section {
