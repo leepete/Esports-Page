@@ -10,6 +10,10 @@ body, html {
   height: 100%;
 }
 
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -86,10 +90,10 @@ header {
   top: 10vh;
   /* overflow-y: hidden; */
   transform: translate(0, -100%);
-  -webkit-transition:-webkit-transform .6s ease;
-     -moz-transition:   -moz-transform .6s ease;
-      -ms-transition:    -ms-transform .6s ease;
-          transition:        transform .6s ease;
+  -webkit-transition:-webkit-transform 4.6s ease;
+     -moz-transition:   -moz-transform 4.6s ease;
+      -ms-transition:    -ms-transform 4.6s ease;
+          transition:        transform 4.6s ease;
   z-index: 1;
 }
 
@@ -115,13 +119,15 @@ header {
 
 .slider ul li:active {
   background-color: rgb(70, 70, 70);
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 .slider ul li a:active {
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
   color: goldenrod;
 }
+
+/* .currently-active-page {
+  background-color: red;
+} */
 
 .slider.open {
   /* visible */
