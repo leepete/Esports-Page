@@ -114,10 +114,20 @@ header {
 }
 
 .slider ul li:active {
-  background-color: rgb(70, 70, 70)
+  background-color: rgb(70, 70, 70);
+    transition: visibility 0s .2s;
+    transition-property: visibility;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
 
 .slider ul li a:active {
+  transition: visibility 0s .2s;
+    transition-property: visibility;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
   color: goldenrod;
 }
 
@@ -140,7 +150,6 @@ header {
 /* Main Container */
 .container {
   background-color: aliceblue;
-  /* overflow: hidden; */
   /* min-height: calc(100vh - (10vh - 40px)); */
    /* Footer fix? browser window height - height of header & footer */
 }
