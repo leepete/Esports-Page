@@ -7,20 +7,17 @@ block content
       h1= title
       p Welcome to #{title}
 
-    section 
-      h1 Section 1
-      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        | Aliquam velit voluptatum similique eos odio laudantium, 
-        | voluptates ratione facere iste magni est corrupti quis quidem 
-    section 
-      h1 Section 2
-      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        | Aliquam velit voluptatum similique eos odio laudantium, 
-        | voluptates ratione facere iste magni est corrupti quis quidem 
-    section 
-      h1 Section 3
-      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        | Aliquam velit voluptatum similique eos odio laudantium, 
-        | voluptates ratione facere iste magni est corrupti quis quidem 
+    section(class="vision-statement") 
+      h1 Our Vision
+      h4 To lead, support and grow Esports in Wellington, New Zealand 
+    section(class="esports-description")
+      h1 What is Esports?
+      p Esports (electronic sports, e-sports, or eSports) is a form of competition using video games. 
+        | Esports takes the form of organized, multiplayer video game competitions
+        | between professional players either individually or as teams.
+    section(class="popular-games") 
+      h1 Most Popular Esports Games Currently
+      div(class="popular-showcase-all")
+
   include footer
   include script

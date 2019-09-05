@@ -10,8 +10,10 @@ const navbarListItem = document.querySelectorAll('.slider ul li');
 let isNavToggled = false;
 let currentHref = '/';
 
+
 function start(){
     setupEventListeners();
+    popularGamesLoad(); //loads popular games showcase
 }
 
 function setupEventListeners(){
@@ -104,6 +106,38 @@ function getCurrentPageIndex(target){
     return nodes.indexOf(li);
 }
 
+function popularGamesLoad(){
+    const gameContainer = document.querySelector('.popular-showcase-all');
+    let mostPopularGames = [
+        {game: "Dota 2", money: 216.3, players: 3359, tournaments: 1124 },
+        {game: "Counter-Strike: Global Offensive", money: 80.7, players: 11988, tournaments: 4237},
+        {game: "Fortnite", money: 74.9, players: 3085, tournaments: 423},
+        {game: "League of Legends", money: 69.3, players: 6601, tournaments: 2253},
+        {game: "StarCraft II", money: 31, players: 1970, tournaments: 5561},
+    ]
+    let mostPopularGamesImages = ['dota2', 'csgo', 'fortnite', 'lol', 'starcraft'];
+    let imgLocation = '../images/index/';
+
+    for(let i = 0; i < mostPopularGames.length; i++){
+        let div = document.createElement('div');
+        let h1 = document.createElement('h1');
+        let p = document.createElement('p');
+
+        div.style.backgroundImage = 'url(' + imgLocation + mostPopularGamesImages[i] + '.jpg)';
+        h1.innerText = mostPopularGames[i].game;
+        p.innerText = '$' + mostPopularGames[i].money + ' million \n' + mostPopularGames[i].players + ' players \n' + mostPopularGames[i].tournaments + ' tournaments';
+
+        div.classList.add('game-showcase');
+        h1.classList.add('game-header');
+        p.classList.add('game-p');
+
+        div.appendChild(h1);
+        div.appendChild(p);
+
+        gameContainer.appendChild(div);
+    }
+}
 
 
 start();
+
