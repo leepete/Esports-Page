@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  div(class="banner-title")
+    h1= title
+
+  section(class="section-one")
+    h1 #{title} Form
+    
+    //- TODO: Post
+    form(method="POST" action="/registration") 
+        div(class="form-outer-div")
+            div
+                label(for="inputName") Name: 
+                input(type="text", name="name", value="")
+            div
+                label(for="inputTeam") Organisation:
+                input(type="text", name="team", value="")
+            div
+                label(for="inputEmail") Email:
+                input(type="text", name="email", value="")
+            div
+                label(for="radioGame") League:
+                select(name="selectGame")
+                    //- It's better if I retrieve the games from the DB!! TOFIX
+                    option(disabled selected value) -- Select a Game --
+                    option(value="CSGO") Counter Strike: Global Offensive
+                    option(value="LOL") League of Legends
+                    option(value="OW") Overwatch
+                    option(value="DOTA") Dota 2
+                    option(value="SC") Starcraft II
+                    option(value="RL") Rocket League
+                    option(value="PUBG") PlayerUnknown's Battlegrounds
+                    option(value="FN") Fortnite
+            div
+                button(type="submit" value="Submit" class="submitButton") Submit
+            
+
+        
+
+  include footer
+  include script
