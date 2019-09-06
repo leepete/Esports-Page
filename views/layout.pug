@@ -6,6 +6,9 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body(ontouchstart="")
-    include header
-
-    block content
+    div(id="container")
+      div(id="content-wrap")
+        include header
+        div(class="banner")
+        block content
+      include footer

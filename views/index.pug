@@ -1,23 +1,25 @@
 extends layout
 
 block content
-  div(class="container")
-    div(class="banner")
-    div(class="banner-title")
-      h1= title
+  div(class="banner-title")
+    h1= title
+    div(class="banner-subtitle")
       p Welcome to #{title}
 
-    section(class="vision-statement") 
-      h1 Our Vision
-      h4 To lead, support and grow Esports in Wellington, New Zealand 
-    section(class="esports-description")
-      h1 What is Esports?
-      p Esports (electronic sports, e-sports, or eSports) is a form of competition using video games. 
-        | Esports takes the form of organized, multiplayer video game competitions
-        | between professional players either individually or as teams.
-    section(class="popular-games") 
-      h1 Most Popular Esports Games Currently
-      div(class="popular-showcase-all")
+  section(class="section-one") 
+    h1 Our Vision
+    p "To lead, support and grow Esports in 
+      | 
+      strong Wellington, New Zealand."
+  section(class="section-two")
+    h1 What is Esports?
+    p Esports (electronic sports, e-sports, or eSports) is a form of competition using video games. 
+    |
+    br
+    |
+    p Esports takes the form of organized, multiplayer video game competitions between professional players either individually or as teams.
+  section(class="section-three") 
+    h1 Most Popular Esports Games Currently
+    div(class="popular-showcase-all")
 
-  include footer
   include script

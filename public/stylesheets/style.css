@@ -6,9 +6,16 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
+  background-color: #1d1e22;
+}
+
+p,
+ul {
+  font-size: 14px;
 }
 
 /* When something is tapped anywhere, it will highlight when active! */
@@ -20,9 +27,22 @@ html {
   overflow: hidden;
 }
 
+/* Container */
+#container {
+  min-height: 100vh;
+  position: relative;
+  background-color: #2c2d2e;
+}
+
+/* Content Wrap */
+#content-wrap {
+  /* to conform to footer */
+  padding-bottom: 8.7rem;
+}
+
 /* Header Styles */
 header {
-  background-color: rgb(50, 50, 50);
+  background-color: #1d1e22;
   width: 100%;
   height: 10vh;
   z-index: 10000;
@@ -41,10 +61,9 @@ header {
   margin-left: 5vw;
   width: 50%;
   height: 75%;
-  background-image: url('../images/pepega-logo.png');
+  background-image: url("../images/pepega-logo.png");
   background-repeat: no-repeat;
   background-size: contain;
-
 }
 
 .navbar-options {
@@ -64,10 +83,12 @@ header {
   cursor: pointer;
 }
 
-.hamburger .line1, .line2, .line3 {
+.hamburger .line1,
+.line2,
+.line3 {
   width: 100%;
   height: 5px;
-  background-color: white;
+  background-color: #d4d4dc;
   border-radius: 3px;
   transition: 0.4s;
 }
@@ -85,18 +106,18 @@ header {
   -webkit-transform: rotate(135deg) translate(-3.4vw, 0.8vh);
 }
 
-.slider{
+.slider {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #1d1e22;
   top: 10vh;
   overflow-y: hidden;
   transform: translate(0, -100%);
-  -webkit-transition:-webkit-transform .6s ease;
-     -moz-transition:   -moz-transform .6s ease;
-      -ms-transition:    -ms-transform .6s ease;
-          transition:        transform .6s ease;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  -moz-transition: -moz-transform 0.6s ease;
+  -ms-transition: -ms-transform 0.6s ease;
+  transition: transform 0.6s ease;
   z-index: 1;
 }
 
@@ -109,52 +130,44 @@ header {
 
 .slider ul li {
   padding: 20px 10px 20px 10px;
-  border-bottom: 1px solid;
-  color: rgb(165, 165, 165);
-  background-color: #e8e8e8;
+  border-bottom: 2px solid;
+  color: #1d1e22;
+  background-color: #1d1e22;
 }
 
-.slider ul li a, .slider ul li a:link, .slider ul li a:visited {
+.slider ul li a,
+.slider ul li a:link,
+.slider ul li a:visited {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(57, 53, 33)
+  color: #d4d4dc;
 }
 
 .slider ul li:active {
-  background-color: rgb(70, 70, 70);
+  background-color: #414348;
 }
 
 .slider ul li a:active {
-  color: goldenrod;
+  color: #e4e1e1;
 }
-
-/* .currently-active-page {
-  background-color: red;
-} */
 
 .slider.open {
   /* visible */
   -webkit-transform: translate(0, 0%);
-     -moz-transform: translate(0, 0%);
-      -ms-transform: translate(0, 0%);
-          transform: translate(0, 0%);
+  -moz-transform: translate(0, 0%);
+  -ms-transform: translate(0, 0%);
+  transform: translate(0, 0%);
 }
 
 .slider.close {
-   /* completely offscreen */
-   -webkit-transform: translate(0, -100%);
-      -moz-transform: translate(0, -100%);
-       -ms-transform: translate(0, -100%);
-           transform: translate(0, -100%);
+  /* completely offscreen */
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
 }
 
-/* Main Container */
-.container {
-  background-color: aliceblue;
-  /* min-height: calc(100vh - (10vh - 40px)); */
-   /* Footer fix? browser window height - height of header & footer */
-}
-
+/* Content*/
 .banner {
   background-image: url("../images/banner-img.jpg");
   /* Center and scale the image nicely */
@@ -162,7 +175,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 40vh; 
+  height: 40vh;
 
   /* Add the blur effect */
   filter: blur(1px);
@@ -170,13 +183,13 @@ header {
 }
 
 .banner-title {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
-  color: rgb(249, 224, 86);
+  color: #feda6a;
   width: 100%;
   height: 40vh;
   margin-top: -40vh;
@@ -189,28 +202,30 @@ header {
 
 /* Index Section */
 section {
-  padding: 4vh 5vw 5vh 5vw;
+  padding: 5vh 5vw 5vh 5vw;
   text-align: center;
+  background-color: #1d1e22;
 }
 
 section h1 {
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
+  color: #d4d4dc;
 }
 
-.vision-statement {
-  background-color: aliceblue;
+section p {
+  color: #d4d4dc;
 }
 
-.esports-description{
-  background-color: rgb(255, 255, 255);
+.section-two {
+  background-color: #393f4d;
 }
 
-.popular-games {
-  background-color: aliceblue;
+.section-three {
+  background-color: #feda6a;
 }
 
-.popular-games h1{
-  margin-bottom: 30px;
+.section-three h1 {
+  color: #1d1e22;
 }
 
 .popular-showcase-all {
@@ -227,6 +242,11 @@ section h1 {
   background-size: cover;
   color: white;
   border-radius: 15px;
+}
+
+.game-showcase h1,
+.game-showcase p {
+  color: white;
 }
 
 .game-header {
@@ -246,25 +266,80 @@ section h1 {
 
 /* Footer */
 footer {
-  background-color: darkgrey; 
-  height: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d1e22;
 }
 
-footer p {
+.footer-div {
+  padding: 3vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+}
+
+.footer-div ul {
+  columns: 3;
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-div li {
+  line-height: 200%;
+  font-size: 12px;
   text-align: center;
-  padding-top: 10px; /* Temp */
 }
 
+.footer-div ul li a,
+.footer-div ul li a:link,
+.footer-div ul li a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: #d4d4dc;
+}
+
+.copyright {
+  color: white;
+  background-color: #000000;
+  padding: 1vh 5vw;
+  text-align: center;
+  bottom: 0;
+}
+
+/* About Page */
+.staff-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.person {
+  margin: 0 auto;
+  padding: 5vh 0;
+}
+
+.person h2 {
+  color: #feda6a;
+  padding: 1vh 0;
+}
+
+.staff-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-bottom: 2vh;
+}
+
+/* ---About--- */
 
 /* Media - Tablets, iPads (portrait) */
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
     height: 7vh;
   }
-  .container {
-    /* min-height: calc(100vh - (7vh - 40px));  */
-  }
-  
+
   .hamburger {
     width: 10%;
   }
@@ -273,7 +348,7 @@ footer p {
     top: 7vh;
   }
 
-  .banner-title h1{
+  .banner-title h1 {
     font-size: 200%;
   }
 
@@ -282,13 +357,12 @@ footer p {
   }
 
   section {
-    padding: 20px 70px 40px 70px; 
+    padding: 20px 70px 40px 70px;
   }
 }
 
 /* Media - Tablets, iPads (landscape) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
 }
 
 /* Media - Laptop, Desktops */
@@ -297,7 +371,7 @@ footer p {
     height: 6vh;
   }
 
-  .banner-title h1{
+  .banner-title h1 {
     font-size: 200%;
   }
 
@@ -306,6 +380,6 @@ footer p {
   }
 
   section {
-    padding: 40px 150px 40px 150px; 
+    padding: 40px 150px 40px 150px;
   }
 }

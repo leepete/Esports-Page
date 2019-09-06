@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div(class="banner-title")
+    h1= title
+
+  section(class="section-two")
+    h1 Our Staff
+    div(class="staff-list")
+      div(class="person")
+        img.image(class="staff-image" src="../images/founders/man1.jpg" alt="Staff Image") 
+        h2 Bob Bee
+        p Co-Founder
+        //- TODO: get images from DB instead img.image(src='/' + img_path_var )
+      div(class="person")
+        img.image(class="staff-image" src="../images/founders/man2.jpg" alt="Staff Image") 
+        h2 John Doe
+        p Co-Founder
+
+  include footer
+  include script
