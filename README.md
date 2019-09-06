@@ -1,11 +1,11 @@
-# My E-Sports Page #
+# Wellington E-Sports Page
 
-NOT optimised for Desktop and Tablets (I am starting with mobile implementation first) 
+Fully Responsive
 
-**Tools/Frameworks:**  
-* JavaScript  
-* HTML  
-* CSS  
-* Express  
-* Nodemon
-* Browser-sync
+NOT optimised for Desktop and Tablets yet (I am starting with mobile implementation first then convert)
+
+**Tools/Frameworks:**
+
+- JavaScript
+- HTML/CSS
+- Node.js/Express
