@@ -6,7 +6,7 @@ const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
-const logo = document.querySelector("#navbar-logo");
+const logo = document.querySelector("#navbar-logo > img");
 
 let isNavToggled = false;
 
@@ -22,7 +22,6 @@ function setupEventListeners() {
   links.forEach(listOption => {
     listOption.addEventListener("click", returnToPage, false);
   });
-
 }
 
 function hamburgerAnimation() {
@@ -46,8 +45,10 @@ function toggleNavLinks() {
 
 function returnToPage(event) {
   let getTarget = event.target;
+  console.log(event);
+  console.log(getTarget.innerText);
   if (getTarget.innerText === "") {
-    if (getTarget.id === "navbar-logo") { 
+    if (getTarget.id === "logo") {
       // if logo is clicked instead of navbar, return home
       window.location.href = getPageHref("Home");
     }
