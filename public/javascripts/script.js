@@ -55,11 +55,11 @@ function returnToPage(event) {
   if (getTarget.innerText === "") {
     // if logo is clicked instead of navbar
     if (getTarget.id === "navbar-logo") {
-      currentWindow = getPageHref("Home");
+      window.location.href = getPageHref("Home");
       // navbarListItem[0].classList.toggle('currently-active-page');
     }
   } else {
-    currentWindow = getPageHref(getTarget.innerText);
+    window.location.href = getPageHref(getTarget.innerText);
   }
   // navbarListItem[navbarIndex].classList.add('currently-active-page');
 }
