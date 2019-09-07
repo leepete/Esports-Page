@@ -1,10 +1,10 @@
 # Wellington E-Sports Page
 
-Fully Responsive
+**Key Features**
 
-NOT optimised for Desktop and Tablets yet (I am starting with mobile implementation first then convert)
+- Fully Responsive to all Web, Tablets and Phones
 
-**Tools/Frameworks:**
+**Tools/Frameworks Used:**
 
 - JavaScript
 - HTML/CSS
