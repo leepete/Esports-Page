@@ -333,7 +333,7 @@ footer {
 }
 /* ---About--- */
 
-/* Registration */
+/* Form Input */
 form,
 select,
 button {
@@ -377,7 +377,71 @@ select {
   width: 25%;
   height: 4vh;
 }
-/* ---Registration--- */
+/* ---Form Input--- */
+
+/* Contact */
+.contact-info {
+  margin: 0 auto;
+  color: white;
+  /* text-align: left; */
+}
+
+.contact-info a {
+  color: goldenrod;
+}
+/* ---Contact--- */
+
+/* Media */
+iframe {
+  width: 100vw;
+  height: 50vh;
+  padding: 10px;
+}
+
+.videos {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* ---Media--- */
+
+/* League */
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border : 3px solid white;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+th {
+  color: goldenrod;
+  text-align: center;
+}
+
+td {
+  color: white;
+}
+
+.division-span {
+  column-span: all;
+}
+
+.games {
+  font-weight: bold;
+}
+
+
+/* ---Leagues--- */
 
 /* Media - Tablets, iPads (portrait) */
 @media (min-width: 768px) and (max-width: 1024px) {

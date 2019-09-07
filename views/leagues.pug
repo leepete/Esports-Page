@@ -1,1 +1,20 @@
 extends layout
+
+block content
+    div(class="banner-title")
+        h1= title
+
+    section(class="section-one")
+        h1 Approved Games
+        table
+            tr
+                th Games
+                th(colspan="3") Divisions
+            each val in games
+                tr
+                    td 
+                        |
+                        span(class="games")=val
+                    td Premier
+                    td Division 1
+                    td Division 2

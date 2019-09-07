@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  res.render("index", { title: "Wellington Esports Association" });
+  res.render("index", { title: "Wellington E-Sports Association" });
 });
 
 /* GET About Us page. */
@@ -20,8 +20,8 @@ router.get("/registration", function(req, res, next) {
 });
 
 /* GET Leagues page. */
-router.get("/leagues", function(req, res, next) {
-  res.render("leagues", { title: "Leagues" });
+router.get("/leagues", function(req, res, next) { //TOFIX retrieve from model
+  res.render("leagues", { title: "Leagues", games: ["CS:GO", "LoL", "OW", "Dota 2", "Starcraft", "Fortnite", "Super Smash"] });
 });
 
 /* GET Events page. */
