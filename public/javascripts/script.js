@@ -1,67 +1,59 @@
 //Main Variables
 const body = document.body;
 
-// Header Variables
+// Nav Variables
 const hamburger = document.querySelector(".hamburger");
-const slider = document.querySelector(".slider");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
 const logo = document.querySelector("#navbar-logo");
-const navbarListItem = document.querySelectorAll(".slider ul li");
 
 let isNavToggled = false;
-let currentWindow = window.location.href;
 
 function start() {
   setupEventListeners();
-  popularGamesLoad(); //loads popular games showcase
+  popularGamesShowcase();
 }
 
 function setupEventListeners() {
   hamburger.addEventListener("click", hamburgerAnimation, false);
-  slider.addEventListener("click", toggleSlider, false);
   logo.addEventListener("click", returnToPage, false);
 
-  navbarListItem.forEach(listOption => {
+  links.forEach(listOption => {
     listOption.addEventListener("click", returnToPage, false);
   });
+
 }
 
 function hamburgerAnimation() {
-  hamburger.classList.add("animate");
-  toggleSlider();
+  const lines = document.querySelectorAll(".line1, .line2, .line3");
+  lines.forEach(line => {
+    line.classList.toggle("animate");
+  });
+  toggleNavLinks();
 }
 
-function toggleSlider() {
+function toggleNavLinks() {
   if (!isNavToggled) {
-    slider.classList.remove("close");
-
-    slider.classList.add("open");
     body.classList.add("no-scroll"); //do not allow scrolling
-
     isNavToggled = true;
   } else {
-    slider.classList.remove("open");
-    hamburger.classList.remove("animate");
     body.classList.remove("no-scroll"); //allow scrolling
-
-    slider.classList.add("close");
     isNavToggled = false;
   }
+  navLinks.classList.toggle("open");
 }
 
 function returnToPage(event) {
   let getTarget = event.target;
-  // let navbarIndex = getCurrentPageIndex(getTarget);
-
   if (getTarget.innerText === "") {
-    // if logo is clicked instead of navbar
-    if (getTarget.id === "navbar-logo") {
+    if (getTarget.id === "navbar-logo") { 
+      // if logo is clicked instead of navbar, return home
       window.location.href = getPageHref("Home");
-      // navbarListItem[0].classList.toggle('currently-active-page');
     }
   } else {
     window.location.href = getPageHref(getTarget.innerText);
   }
-  // navbarListItem[navbarIndex].classList.add('currently-active-page');
 }
 
 function getPageHref(href) {
@@ -87,19 +79,19 @@ function getPageHref(href) {
   }
 }
 
-// //Was planning to keep current page highlighted on navbar... need to figure out how
-// function getCurrentPageIndex(target){
-//     //call closest to get a refernce to li element
-//     let li = target.closest('li');
-//     //get an array reference of 'ul' children and pas in children HTMLCollection
-//     let nodes = Array.from(li.closest('ul').children);
-//     //return index
-//     return nodes.indexOf(li);
-// }
+// // //Was planning to keep current page highlighted on navbar... need to figure out how
+// // function getCurrentPageIndex(target){
+// //     //call closest to get a refernce to li element
+// //     let li = target.closest('li');
+// //     //get an array reference of 'ul' children and pas in children HTMLCollection
+// //     let nodes = Array.from(li.closest('ul').children);
+// //     //return index
+// //     return nodes.indexOf(li);
+// // }
 
-function popularGamesLoad() {
+function popularGamesShowcase() {
   try {
-    if (currentWindow.slice(-1) === "/") {
+    if (window.location.href.slice(-1) === "/") {
       const gameContainer = document.querySelector(".popular-showcase-all");
       let mostPopularGames = [
         { game: "Dota 2", money: 216.3, players: 3359, tournaments: 1124 },
