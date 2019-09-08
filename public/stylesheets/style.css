@@ -164,8 +164,8 @@ nav {
 
 /* Navbar Toggle Animation */
 .line1.animate {
-  transform: rotate(-315deg) translate(8px, 9px);
-  -webkit-transform: rotate(-315deg) translate(8px, 9px);
+  transform: rotate(-315deg) translate(7px, 9px);
+  -webkit-transform: rotate(-315deg) translate(7px, 9px);
 }
 .line2.animate {
   opacity: 0;
