@@ -51,7 +51,7 @@ function returnToPage(event) {
       window.location.href = getPageHref("Home");
     }
   } else {
-    window.location.href = getPageHref("Events");
+    window.location.href = getPageHref(getTarget.innerText);
   }
 }
 
@@ -74,7 +74,7 @@ function getPageHref(href) {
     case "Contact Us":
       return "/contact";
     default:
-      return "/error";
+      throw new Error("Page does not exist!");
   }
 }
 

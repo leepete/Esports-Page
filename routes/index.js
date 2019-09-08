@@ -20,8 +20,20 @@ router.get("/registration", function(req, res, next) {
 });
 
 /* GET Leagues page. */
-router.get("/leagues", function(req, res, next) { //TOFIX retrieve from model
-  res.render("leagues", { title: "Leagues", games: ["CS:GO", "LoL", "OW", "Dota 2", "Starcraft", "Fortnite", "Super Smash"] });
+router.get("/leagues", function(req, res, next) {
+  //TOFIX retrieve from model
+  res.render("leagues", {
+    title: "Leagues",
+    games: [
+      "CS:GO",
+      "LoL",
+      "OW",
+      "Dota 2",
+      "Starcraft",
+      "Fortnite",
+      "Super Smash"
+    ]
+  });
 });
 
 /* GET Events page. */
@@ -39,14 +51,9 @@ router.get("/media", function(req, res, next) {
   res.render("media", { title: "Media" });
 });
 
-/* GET  page. */
+/* GET Contact page. */
 router.get("/contact", function(req, res, next) {
   res.render("contact", { title: "Contact Us" });
 });
-
-// /* GET  page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: '' });
-// });
 
 module.exports = router;
