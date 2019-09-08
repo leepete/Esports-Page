@@ -45,8 +45,6 @@ function toggleNavLinks() {
 
 function returnToPage(event) {
   let getTarget = event.target;
-  console.log(event);
-  console.log(getTarget.innerText);
   if (getTarget.innerText === "") {
     if (getTarget.id === "logo") {
       // if logo is clicked instead of navbar, return home
