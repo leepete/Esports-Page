@@ -1,3 +1,5 @@
+/* Media - Most of the Smartphones Mobiles (Portrait) */
+
 /* Base CSS Elements */
 * {
   margin: 0;
@@ -15,7 +17,8 @@ body,
 html {
   width: 100%;
   height: 100%;
-  /* background-color: #1d1e22; */
+  overflow: auto;
+  background-color: #1d1e22;
 }
 
 p,
@@ -72,14 +75,12 @@ nav {
   align-items: center;
   list-style: none;
   width: 100%;
-  height: 75vh;
-  top: 9.6vh; /* go under nav */
+  height: 70vh;
+  top: 9.8vh; /* go under nav */
   position: fixed;
-  background: black;
   flex-direction: column;
   clip-path: circle(100px at 90% -25%); /* at "horizontal" "vertical" */
   -webkit-clip-path: circle(100px at 90% -25%); /* browser support */
-  transition: all 0.2s ease-out;
   background-color: #1d1e22;
   z-index: 2;
   pointer-events: none;
@@ -93,12 +94,6 @@ nav {
   height: 100%;
   text-align: center;
   cursor: pointer;
-}
-
-/* So clicking works on mobile */
-.nav-links li a {
-  width: 100%;
-  height: 100%;
 }
 
 .nav-label {
@@ -123,13 +118,15 @@ nav {
   color: #d4d4dc;
   text-decoration: none;
   font-size: 16px;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-links li a:active {
   color: #e4e1e1;
 }
 
-/* IF PAGE CURRENTLY ACTIVE  */
+/* IF ON PAGE CURRENTLY - TODO */
 .nav-links li a.active {
   background-color: cyan;
 }
@@ -146,7 +143,7 @@ nav {
   width: 30px;
   height: 3px;
   background: white;
-  margin: 7px 2px;
+  margin: 7px 0;
   -webkit-transition: -webkit-transform 0.3s ease;
   -moz-transition: -moz-transform 0.3s ease;
   -ms-transition: -ms-transform 0.3s ease;
@@ -157,6 +154,7 @@ nav {
   position: absolute;
   cursor: pointer;
   right: 5%;
+  padding: 5px;
   top: 50%;
   transform: translate(-5%, -50%); /* Perfectly center it with transform */
   z-index: 2; /* show above nav */
@@ -213,6 +211,7 @@ section {
   padding: 5vh 5vw 5vh 5vw;
   text-align: center;
   background-color: #1d1e22;
+  border-top: 2px solid;
 }
 
 section h1 {
@@ -222,18 +221,6 @@ section h1 {
 
 section p {
   color: #d4d4dc;
-}
-
-.section-two {
-  background-color: #393f4d;
-}
-
-.section-three {
-  background-color: #feda6a;
-}
-
-.section-three h1 {
-  color: #1d1e22;
 }
 
 .popular-showcase-all {
@@ -452,57 +439,177 @@ td {
 }
 /* ---Leagues--- */
 
-/* Landscape Orientation */
-@media (max-width: 667px) and (orientation: landscape) {
+/* Media - Low Resolution Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  nav {
+    height: 7vh;
+  }
+
+  .nav-links {
+    top: 6.8vh;
+    height: 50%;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 50px;
+    height: 5px;
+    margin: 10px 0;
+  }
+
+  .line1.animate {
+    transform: rotate(-315deg) translate(10px, 11px);
+    -webkit-transform: rotate(-315deg) translate(10px, 11px);
+  }
+
+  .line3.animate {
+    transform: rotate(135deg) translate(-11px, 12px);
+    -webkit-transform: rotate(135deg) translate(-11px, 12px);
+  }
+
   .nav-links {
     clip-path: circle(100px at 90% -35%); /* at "horizontal" "vertical" */
     -webkit-clip-path: circle(100px at 90% -35%); /* browser support */
   }
 }
 
+/* Media - Low Resolution Tablets (landscape) */
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  nav {
+    height: 15vh;
+  }
+
+  #navbar-logo {
+    left: 0;
+  }
+
+  .nav-links {
+    top: 14.5vh;
+    height: 75%;
+    clip-path: circle(10px at 90% -50%);
+    -webkit-clip-path: circle(10px at 90% -50%);
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+  }
+
+  .line1.animate {
+    transform: rotate(-315deg) translate(5px, 6px);
+    -webkit-transform: rotate(-315deg) translate(5px, 6px);
+  }
+  .line3.animate {
+    transform: rotate(135deg) translate(-5px, 7px);
+    -webkit-transform: rotate(135deg) translate(-5px, 7px);
+  }
+}
+
 /* Media - Tablets, iPads (portrait) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  header {
+  nav {
     height: 7vh;
   }
 
-  .hamburger {
-    width: 10%;
+  .nav-links {
+    top: 6.8vh;
+    height: 50%;
   }
 
-  .slider {
-    top: 7vh;
+  .line1,
+  .line2,
+  .line3 {
+    width: 50px;
+    height: 5px;
+    margin: 10px 0;
   }
 
-  .banner-title h1 {
-    font-size: 200%;
+  .line1.animate {
+    transform: rotate(-315deg) translate(10px, 10px);
+    -webkit-transform: rotate(-315deg) translate(10px, 10px);
+  }
+  .line3.animate {
+    transform: rotate(135deg) translate(-11px, 12px);
+    -webkit-transform: rotate(135deg) translate(-11px, 12px);
+  }
+}
+
+/* Media - Tablets, iPads (portrait) */
+@media (min-width: 768px) and (max-height: 1024px) {
+  nav {
+    height: 7vh;
   }
 
-  .game-showcase {
-    margin: 0 10px 10px 0;
-  }
-
-  section {
-    padding: 20px 70px 40px 70px;
+  #navbar-logo {
+    left: 0;
   }
 }
 
 /* Media - Tablets, iPads (landscape) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  nav {
+    height: 10vh;
+  }
+
+  .nav-links {
+    top: 9.8vh;
+    height: 60%;
+    clip-path: circle(10px at 90% -50%);
+    -webkit-clip-path: circle(10px at 90% -50%);
+  }
 }
 
-/* Media - Laptop, Desktops */
-@media (min-width: 1281px) {
+/* Media - Laptops, Desktops @ 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  nav {
+    height: 6vh;
+  }
+
+  #navbar-logo {
+    left: 0;
+  }
+
   .nav-links {
     position: absolute;
     flex-direction: row;
-    height: 10vh;
+    height: 6vh;
+    width: 75%;
+    top: 0;
+    right: 0;
+    /* Need this to allow functionality of buttons! */
+    clip-path: circle(5000px at 0% 0%);
+    -webkit-clip-path: circle(5000px at 0% 0%);
+    pointer-events: all;
+  }
+}
+
+/* Media -  Desktops (Higher Resolutions)*/
+@media (min-width: 1281px) {
+  nav {
+    height: 5vh;
+  }
+
+  #navbar-logo {
+    width: 10%;
+  }
+
+  .nav-links {
+    position: absolute;
+    flex-direction: row;
+    height: 5vh;
     width: 75%;
     top: 0;
     right: 0;
     transition: none;
-    clip-path: none;
-    -webkit-clip-path: none;
+    /* Need this to allow functionality of buttons! */
+    clip-path: circle(5000px at 0% 0%);
+    -webkit-clip-path: circle(5000px at 0% 0%);
+    pointer-events: all;
+    transition: none;
   }
 
   .hamburger {
@@ -510,14 +617,6 @@ td {
   }
 
   .banner-title h1 {
-    font-size: 200%;
-  }
-
-  .game-showcase {
-    margin: 0 10px 10px 0;
-  }
-
-  section {
-    padding: 40px 150px 40px 150px;
+    font-size: 300%;
   }
 }

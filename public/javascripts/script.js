@@ -1,14 +1,6 @@
 //Main Variables
 const body = document.body;
-
-// Nav Variables
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
-
-const logo = document.querySelector("#navbar-logo > img");
-
-let isNavToggled = false;
+const desktopViewMinimum = 1025;
 
 function start() {
   setupEventListeners();
@@ -16,12 +8,18 @@ function start() {
 }
 
 function setupEventListeners() {
+  const hamburger = document.querySelector(".hamburger");
+  const links = document.querySelectorAll(".nav-links li");
+  const logo = document.querySelector("#navbar-logo > img");
+
   hamburger.addEventListener("click", hamburgerAnimation, false);
   logo.addEventListener("click", returnToPage, false);
 
   links.forEach(listOption => {
     listOption.addEventListener("click", returnToPage, false);
   });
+
+  window.addEventListener("resize", windowSizeListener, false);
 }
 
 function hamburgerAnimation() {
@@ -29,18 +27,32 @@ function hamburgerAnimation() {
   lines.forEach(line => {
     line.classList.toggle("animate");
   });
-  toggleNavLinks();
+  toggleNav();
 }
 
-function toggleNavLinks() {
-  if (!isNavToggled) {
-    body.classList.add("no-scroll"); //do not allow scrolling
-    isNavToggled = true;
+function toggleNav() {
+  const navLinks = document.querySelector(".nav-links");
+
+  if (!hasNavClassExists(navLinks, "open")) {
+    navLinks.classList.add("open");
   } else {
-    body.classList.remove("no-scroll"); //allow scrolling
-    isNavToggled = false;
+    navLinks.classList.remove("open");
   }
-  navLinks.classList.toggle("open");
+}
+
+function hasNavClassExists(element, check) {
+  if (element.classList.contains(check)) {
+    return true;
+  }
+  return false;
+}
+
+function windowSizeListener() {
+  if (window.innerWidth >= desktopViewMinimum) {
+    body.classList.remove("no-scroll");
+  } else {
+    body.classList.add("no-scroll");
+  }
 }
 
 function returnToPage(event) {
