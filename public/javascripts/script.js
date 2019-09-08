@@ -74,7 +74,7 @@ function getPageHref(href) {
     case "Contact Us":
       return "/contact";
     default:
-      return "/404";
+      return "/error";
   }
 }
 
