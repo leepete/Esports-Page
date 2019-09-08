@@ -27,6 +27,7 @@ Check it out the website here hosted on **[Heroku](https://salty-mountain-59442.
 - Logo change
 - More content
 - Design changes, better colours
+- May implement the use of React
 
 ## Issues as of 8/9/19
 
