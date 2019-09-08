@@ -34,8 +34,12 @@ function toggleNav() {
   const navLinks = document.querySelector(".nav-links");
 
   if (!hasNavClassExists(navLinks, "open")) {
+    if (window.innerWidth <= desktopViewMinimum) {
+      body.classList.add("no-scroll");
+    }
     navLinks.classList.add("open");
   } else {
+    body.classList.remove("no-scroll");
     navLinks.classList.remove("open");
   }
 }
@@ -89,16 +93,6 @@ function getPageHref(href) {
       throw new Error("Page does not exist!");
   }
 }
-
-// // //Was planning to keep current page highlighted on navbar... need to figure out how
-// // function getCurrentPageIndex(target){
-// //     //call closest to get a refernce to li element
-// //     let li = target.closest('li');
-// //     //get an array reference of 'ul' children and pas in children HTMLCollection
-// //     let nodes = Array.from(li.closest('ul').children);
-// //     //return index
-// //     return nodes.indexOf(li);
-// // }
 
 function popularGamesShowcase() {
   try {
