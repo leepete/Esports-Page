@@ -51,7 +51,7 @@ function returnToPage(event) {
       window.location.href = getPageHref("Home");
     }
   } else {
-    window.location.href = getPageHref(getTarget.innerText);
+    window.location.href = getPageHref("Events");
   }
 }
 
