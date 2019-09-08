@@ -4,7 +4,7 @@ const body = document.body;
 // Nav Variables
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
+const links = document.querySelectorAll("li");
 
 const logo = document.querySelector("#navbar-logo > img");
 
