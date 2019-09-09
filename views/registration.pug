@@ -22,15 +22,10 @@ block content
             div
                 label(for="radioGame") League:
                 select(name="selectGame")
-                    //- It's better if I retrieve the games from the DB!! TOFIX
+                    
                     option(disabled selected value) -- Select a Game --
-                    option(value="CSGO") Counter Strike: Global Offensive
-                    option(value="LOL") League of Legends
-                    option(value="OW") Overwatch
-                    option(value="DOTA") Dota 2
-                    option(value="SC") Starcraft II
-                    option(value="RL") Rocket League
-                    option(value="PUBG") PlayerUnknown's Battlegrounds
-                    option(value="FN") Fortnite
+                    each game in games
+                        option(value=game.abbr) #{game.game}
+
             div
                 button(type="submit" value="Submit" class="submitButton") Submit

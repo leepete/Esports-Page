@@ -11,30 +11,24 @@ Check it out the website here hosted on **[Heroku](https://salty-mountain-59442.
 - JavaScript
 - HTML/CSS
 - Node.js/Express
-- MongoDB
+- MongoDB/Mongoose
 
 ## Current Features
 
 - Responsive to all window sizes (Web, Tablets and Phones) and orientation (portrait and landscape)
-- Basic form posts to Database
-- Cool nav bar animation
 
 ## Future Updates
 
 - Faster, better performance
-- More DB implementations
+- Get DB implemented
 - Login Feature
 - Logo change
 - More content
 - Design changes, better colours
-- May implement the use of React
+- Considering using React.js
 
 ## Issues as of 8/9/19
 
 - Safari Navigation Bar issues
 - Does not highlight the navbar button on the current page the user is on
-
-## Team
-
-- Me - Developer
-- Greg - My mate and currently the business guy
+- Post form does not work yet

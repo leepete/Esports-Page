@@ -3,11 +3,20 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const mongoose = require("mongoose");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
 const app = express();
+
+//connect to DB
+mongoose.connect(
+  "mongodb+srv://wesa_user:wesa123@cluster0-apf6m.mongodb.net/test?retryWrites=true&w=majority",
+  {
+    useMongoClient: true
+  }
+);
 
 // port variable
 const port = process.env.PORT || "8000";

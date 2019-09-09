@@ -6,6 +6,8 @@ router.get("/", function(req, res, next) {
   res.render("index", { title: "Wellington E-Sports Association" });
 });
 
+// TODO: Fix up the routing below
+
 /* GET About Us page. */
 router.get("/about", function(req, res, next) {
   res.render("about", { title: "About Us" });
@@ -15,7 +17,17 @@ router.get("/about", function(req, res, next) {
 router.get("/registration", function(req, res, next) {
   res.render("registration", {
     title: "Registration",
-    image: "maybe insert object to loop over"
+    //TO FIX: use DB
+    games: [
+      { game: "Counter Strike: Global Offensive", abbr: "CS:GO" },
+      { game: "League of Legends", abbr: "LOL" },
+      { game: "Overwatch", abbr: "OW" },
+      { game: "Dota 2", abbr: "DOTA" },
+      { game: "Starcraft II", abbr: "SC2" },
+      { game: "Rocket League", abbr: "RL" },
+      { game: "PlayerUnknown's Battlegrounds", abbr: "PUBG" },
+      { game: "Fortnite", abbr: "FN" }
+    ]
   });
 });
 
